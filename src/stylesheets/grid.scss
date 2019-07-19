@@ -7,6 +7,8 @@ body {
 }
 
 #grid {
+  $breakpoint-tablet: 768px;
+
   #main {
     position: relative;
   }
@@ -20,6 +22,10 @@ body {
     // make both divs the exact same height
     min-height: 50vh;
     height: 400px;
+
+    @media (min-width: $breakpoint-tablet) {
+      min-height: 90vh;
+    }
   }
 
   #stripes {
@@ -68,12 +74,24 @@ body {
     display: flex;
     align-items: center;
 
+    @media (min-width: $breakpoint-tablet) {
+      margin-top: -100px;
+    }
+
     p {
-      max-width: 50%;
+      max-width: 60%;
+
+      @media (min-width: $breakpoint-tablet) {
+        max-width: 50%;
+      }
     }
   }
 
   .container {
     padding: 16px;
+
+    @media (min-width: $breakpoint-tablet) {
+      margin-left: 60px;
+    }
   }
 }
