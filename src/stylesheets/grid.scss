@@ -1,0 +1,79 @@
+// Load CSS Reset from NPM
+@import "~normalize.css";
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 14px;
+}
+
+#grid {
+  #main {
+    position: relative;
+  }
+
+  h1 {
+    color: white;
+  }
+
+  #stripes,
+  #intro {
+    // make both divs the exact same height
+    min-height: 50vh;
+    height: 400px;
+  }
+
+  #stripes {
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    color: white;
+    display: grid;
+    transform: skewY(-12deg);
+    transform-origin: 0;
+    background: linear-gradient(150deg, #53f 15%, #05d5ff 70%, #a6ffcb 94%);
+    grid-template-areas: "stripe1 stripe2 stripe3 . " ". . . . " ". . . stripe4" "stripe5 . . .";
+  }
+
+  .stripe1 {
+    grid-area: stripe1;
+    background-color: #53f;
+  }
+
+  .stripe2 {
+    grid-area: stripe2;
+    background-color: #4553ff;
+  }
+
+  .stripe3 {
+    grid-area: stripe3;
+    background-color: #4f40ff;
+  }
+
+  .stripe4 {
+    grid-area: stripe4;
+    background-color: #25ddf5;
+  }
+
+  .stripe5 {
+    grid-area: stripe5;
+    background-color: #1fa2ff;
+  }
+
+  #intro {
+    color: #a6ffcb;
+    font-size: 20px;
+    // position this on top of the grid
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+
+    p {
+      max-width: 50%;
+    }
+  }
+
+  .container {
+    padding: 16px;
+  }
+}

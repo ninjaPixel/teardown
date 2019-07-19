@@ -1,1 +1,15 @@
-// Add your styles here
+// Load CSS Reset from NPM
+@import "~normalize.css";
+@import "grid.scss";
+
+.root {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 14px;
+  background-color: #faf9f7;
+  color: #27241d;
+
+  a {
+    cursor: pointer;
+    color: #044e54;
+  }
+}
